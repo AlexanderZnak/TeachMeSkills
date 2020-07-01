@@ -1,4 +1,4 @@
-package lesson6Task.task2;
+package lesson6Task.task2.pants;
 
 public class NikePants implements IPants {
     private String name;
@@ -9,10 +9,21 @@ public class NikePants implements IPants {
         this.size = size;
     }
 
-    public String getName() {return name;}
-    public void setName(String name) {this.name = name;}
-    public int getSize() {return size;}
-    public void setSize(int size) {this.size = size;}
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
 
     @Override
     public void putOn() {

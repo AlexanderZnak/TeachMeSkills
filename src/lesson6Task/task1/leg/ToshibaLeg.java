@@ -1,4 +1,4 @@
-package lesson6Task.task1;
+package lesson6Task.task1.leg;
 
 public class ToshibaLeg implements ILeg {
     private int price;
@@ -8,8 +8,13 @@ public class ToshibaLeg implements ILeg {
     }
 
     @Override
-    public int getPrice() {return price;}
-    public void setPrice(int price) {this.price = price;}
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
     @Override
     public void step() {

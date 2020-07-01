@@ -1,5 +1,9 @@
 package lesson6Task.task2;
 
+import lesson6Task.task2.coat.*;
+import lesson6Task.task2.pants.*;
+import lesson6Task.task2.shoes.*;
+
 public class Human implements IHuman {
     private String name;
     private ICoat coat;
@@ -13,14 +17,37 @@ public class Human implements IHuman {
         this.shoes = shoes;
     }
 
-    public String getName() {return name;}
-    public void setName(String name) {this.name = name;}
-    public ICoat getCoat() {return coat;}
-    public void setCoat(ICoat coat) {this.coat = coat;}
-    public IPants getPants() {return pants;}
-    public void setPants(IPants pants) {this.pants = pants;}
-    public IShoes getShoes() {return  shoes;}
-    public void setShoes(IShoes shoes) {this.shoes = shoes;}
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ICoat getCoat() {
+        return coat;
+    }
+
+    public void setCoat(ICoat coat) {
+        this.coat = coat;
+    }
+
+    public IPants getPants() {
+        return pants;
+    }
+
+    public void setPants(IPants pants) {
+        this.pants = pants;
+    }
+
+    public IShoes getShoes() {
+        return shoes;
+    }
+
+    public void setShoes(IShoes shoes) {
+        this.shoes = shoes;
+    }
 
     @Override
     public void putOnAll() {

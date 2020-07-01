@@ -1,5 +1,9 @@
 package lesson6Task.task1;
 
+import lesson6Task.task1.hand.*;
+import lesson6Task.task1.head.*;
+import lesson6Task.task1.leg.*;
+
 public class Robot implements IRobot {
     private IHand hand;
     private IHead head;
@@ -11,12 +15,29 @@ public class Robot implements IRobot {
         this.leg = leg;
     }
 
-    public IHand getHand() {return hand;}
-    public void setHand(IHand hand) {this.hand = hand;}
-    public IHead getHead() {return head;}
-    public void setHead(IHead head) {this.head = head;}
-    public ILeg getLeg() {return leg;}
-    public void setLeg(ILeg leg) {this.leg = leg;}
+    public IHand getHand() {
+        return hand;
+    }
+
+    public void setHand(IHand hand) {
+        this.hand = hand;
+    }
+
+    public IHead getHead() {
+        return head;
+    }
+
+    public void setHead(IHead head) {
+        this.head = head;
+    }
+
+    public ILeg getLeg() {
+        return leg;
+    }
+
+    public void setLeg(ILeg leg) {
+        this.leg = leg;
+    }
 
     @Override
     public void action() {
@@ -27,8 +48,7 @@ public class Robot implements IRobot {
 
     @Override
     public int getPrice() {
-        int price = hand.getPrice() + head.getPrice() + leg.getPrice();
-        return price;
+        return hand.getPrice() + head.getPrice() + leg.getPrice();
     }
 
 }

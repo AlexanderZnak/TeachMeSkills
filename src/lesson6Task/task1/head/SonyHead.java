@@ -1,4 +1,4 @@
-package lesson6Task.task1;
+package lesson6Task.task1.head;
 
 public class SonyHead implements IHead {
     private int price;
@@ -6,9 +6,15 @@ public class SonyHead implements IHead {
     public SonyHead(int price) {
         this.price = price;
     }
+
     @Override
-    public int getPrice() {return price;}
-    public void setPrice(int price) {this.price = price;}
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
     @Override
     public void speak() {
