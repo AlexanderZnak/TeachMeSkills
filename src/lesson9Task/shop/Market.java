@@ -2,6 +2,7 @@ package lesson9Task.shop;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Market {
     List<Stuff> list = new ArrayList<>();
@@ -9,10 +10,14 @@ public class Market {
     public List<Stuff> getList() { return list;}
 
     public void addList (Stuff stuff) {
+        int x = 0;
         for (int i = 0; i < list.size(); i++) {
-            if (stuff.getId() != list.get(i).getId()) {
-                list.add(stuff);
+            if (list.get(i).getId() == stuff.getId()) {
+                x++;
             }
+        }
+        if (x == 0) {
+            list.add(stuff);
         }
     }
 
@@ -25,9 +30,12 @@ public class Market {
     }
 
     public void getRewrite(Stuff stuff) {
+        Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < list.size(); i++) {
-            if (stuff.equals(list.get(i))) {
-//                stuff.setId();
+            if (list.get(i).equals(stuff)) {
+                stuff.setName(scanner.nextLine());////почему-то когда ставил эту строку логически между  setId и setPrice программа выкидывала ошибку...
+                stuff.setId(scanner.nextInt());
+                stuff.setPrice(scanner.nextInt());
             }
         }
     }
