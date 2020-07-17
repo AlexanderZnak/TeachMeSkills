@@ -4,14 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Market {
-    private List<Stuff> list;
+    List<Stuff> list = new ArrayList<>();
 
-    public Market(List<Stuff> list) {
-        this.list = list;
-    }
-
-    public List<Stuff> getList() {return list;}
-    public void setList(List<Stuff> list) {this.list = list;}
+    public List<Stuff> getList() { return list;}
 
     public void addList (Stuff stuff) {
         for (int i = 0; i < list.size(); i++) {
@@ -22,16 +17,16 @@ public class Market {
     }
 
     public void deleteStuff(int id) {
-        for (int i = 0; i < getList().size(); i++) {
-            if (getList().get(i).getId() == id) {
-                getList().remove(getList().get(i));
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getId() == id) {
+                list.remove(list.get(i));
             }
         }
     }
 
     public void getRewrite(Stuff stuff) {
-        for (int i = 0; i < getList().size(); i++) {
-            if (stuff.equals(getList().get(i))) {
+        for (int i = 0; i < list.size(); i++) {
+            if (stuff.equals(list.get(i))) {
 //                stuff.setId();
             }
         }
